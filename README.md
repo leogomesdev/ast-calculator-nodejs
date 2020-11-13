@@ -82,7 +82,7 @@ If using [nvm](github.com/nvm-sh/nvm), you can easily run:
 ### Running unit tests
 
 ```bash
-   npm run test:cov
+   npm run test:cover
 ```
 
 ```bash
