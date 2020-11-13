@@ -4,7 +4,7 @@ import CalculatorValidator from './calculator/calculator.validator';
 import OperatorsDictionary from './calculator/operators.dictionary';
 
 const calculatorValidator: CalculatorValidator = new CalculatorValidator(
-  [...(OperatorsDictionary.operatorsList.keys())],
+  Array.from(OperatorsDictionary.operatorsList.keys()),
 );
 
 const calculatorService: CalculatorService = new CalculatorService(
@@ -28,7 +28,7 @@ function startFromConsole() {
     } catch (error) {
       console.error(`${error}\n`);
     }
-    readlineTool.close();
+    startFromConsole();
   });
 }
 
