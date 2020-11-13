@@ -41,7 +41,6 @@ Samples:
 ### For local usage with Docker:
 
 - [Docker Engine](https://docs.docker.com/install)
-- [Docker Compose](https://docs.docker.com/compose/install)
 
 ## Running
 
