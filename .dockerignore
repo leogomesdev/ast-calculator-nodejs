@@ -1,0 +1,12 @@
+.vscode
+.git
+.gitignore
+.nvmrc
+
+coverage
+dist
+docker-compose.yml
+Dockerfile
+LICENSE
+node_modules
+README.md

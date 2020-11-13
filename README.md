@@ -47,15 +47,17 @@ Samples:
 
 ### With Docker
 
-- Be sure you have [Docker](https://docs.docker.com/get-docker) and [docker-compose](https://docs.docker.com/compose) installed.
-- Run:
+- Be sure you have [Docker](https://docs.docker.com/get-docker) installed.
+- Build image and run the container:
 
 ```bash
-docker-compose up
+docker build -t calculator .
+docker run -it calculator:latest /bin/sh
 ```
 
+- Start the application:
 ```bash
-docker exec -it calculator bash
+node dist/app.js
 ```
 
 ### Without Docker
@@ -63,18 +65,26 @@ docker exec -it calculator bash
 Be sure to install the [requirements](#requirements).
 If using [nvm](github.com/nvm-sh/nvm), you can easily run:
   ```bash
-  $ nvm use
+  nvm use
   ```
 
 - Install dependencies and start the application:
   ```bash
-  $ npm install
+  npm install
 
   # development
-  $ npm run start:dev
+  npm run start:dev
+
+  # production
+  npm run build
+  npm run start
   ```
 
-## Running unit tests
+### Running unit tests
+
+```bash
+   npm run test:cov
+```
 
 ```bash
    npm run test
