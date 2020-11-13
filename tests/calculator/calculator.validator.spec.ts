@@ -2,7 +2,7 @@ import CalculatorValidator from '../../src/calculator/calculator.validator';
 import OperatorsDictionary from '../../src/calculator/operators.dictionary';
 
 describe('CalculatorValidator', () => {
-  const operatorsList: string[] = Array.from(OperatorsDictionary.operatorsList.keys());
+  const operatorsList: string[] = [...(OperatorsDictionary.operatorsList.keys())];
   let calculatorValidator: CalculatorValidator;
   calculatorValidator = new CalculatorValidator(operatorsList);
 
