@@ -20,7 +20,14 @@
     "test": "jest --verbose",
     "test:cover": "jest --coverage"
   },
-  "keywords": ["Calculator", "Abstract Syntax Tree", "ABS", "TypeScript", "Jest", "NodeJS"],
+  "keywords": [
+    "Calculator",
+    "Abstract Syntax Tree",
+    "ABS",
+    "TypeScript",
+    "Jest",
+    "NodeJS"
+  ],
   "author": "Leonardo Gomes da Silva",
   "license": "MIT",
   "dependencies": {
