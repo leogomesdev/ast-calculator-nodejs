@@ -37,7 +37,7 @@ describe('CalculatorService', () => {
         { operationName: 'divided and plus', testCase: '(20 divided 5) plus 10', expectedResult: 14 },
         { operationName: 'multiple parentheses', testCase: '(-9 plus 10) plus 5 times (9 minus (2 plus 1)) minus 5 divided 2', expectedResult: 28.5 },
         { operationName: 'multiple', testCase: '2 plus 1 minus 5 divided 2 minus 1', expectedResult: -0.5 },
-        { operationName: 'big', testCase: '-9 plus 10 plus 5 times 9 minus 2 plus 1 minus 5 divided 2', expectedResult: 42.5 },
+        { operationName: 'big', testCase: '-9 plus 10 plus 5 times 9 minus 2 plus 1 minus 5 divided +2', expectedResult: 42.5 },
       ];
 
       cases.forEach((item) => {
