@@ -1,6 +1,6 @@
 {
   "name": "calculator",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "A calculator (console application) built with Node.js",
   "engines": {
     "node": ">=14.0.0",
@@ -20,7 +20,7 @@
     "test": "jest --verbose",
     "test:cover": "jest --coverage"
   },
-  "keywords": [],
+  "keywords": ["Calculator", "Abstract Syntax Tree", "ABS", "TypeScript", "Jest", "NodeJS"],
   "author": "Leonardo Gomes da Silva",
   "license": "MIT",
   "dependencies": {
