@@ -21,6 +21,7 @@ This application allows the user to input verbal math expressions and gets the r
 |          2 plus 1 minus 5 divided 2 minus 1 |  -0.5  |
 |               4 times 4                     |   16   |
 |               20 divided 5                  |   4    |
+|               0.5 times 10                  |   5    |
 
 **Please, check the [Implementation](#implementation) section for more details.**
 

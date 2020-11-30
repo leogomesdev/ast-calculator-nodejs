@@ -40,7 +40,7 @@ export default class TokenService {
    * @returns boolean true if the token was added, otherwise returns false
    */
   private addStringAsToken(currentString: string, nextValue: string): boolean {
-    if (this.isNumber(currentString) && !this.isNumber(nextValue)) {
+    if (this.isNumber(currentString) && !this.isNumber(nextValue) && nextValue !== '.') {
       this.tokens.push({ type: this.operatorsDictionary.TYPE_NUM, value: Number(currentString) });
       return true;
     }

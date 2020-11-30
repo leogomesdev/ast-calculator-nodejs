@@ -11,7 +11,7 @@ export default class CalculatorValidator implements ValidatorInterface {
    */
   constructor(validMathOperators: string[]) {
     const operators: string = validMathOperators.join('|');
-    this.regexExpression = new RegExp(`^(${operators}|[0-9 \\+\\-()])*$`);
+    this.regexExpression = new RegExp(`^(${operators}|[0-9 .\\+\\-()])*$`);
   }
 
   /**
