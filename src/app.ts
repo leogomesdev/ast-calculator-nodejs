@@ -3,14 +3,11 @@ import CalculatorService from './calculator/calculator.service';
 import CalculatorValidator from './calculator/calculator.validator';
 import OperatorsDictionary from './calculator/operators.dictionary';
 
-const calculatorValidator: CalculatorValidator = new CalculatorValidator(
-  Array.from(OperatorsDictionary.operatorsList.keys()),
-);
+const validMathOperators: string[] = new OperatorsDictionary().ALL;
 
-const calculatorService: CalculatorService = new CalculatorService(
-  OperatorsDictionary.operatorsList,
-  calculatorValidator,
-);
+const calculatorValidator: CalculatorValidator = new CalculatorValidator(validMathOperators);
+
+const calculatorService: CalculatorService = new CalculatorService(calculatorValidator);
 
 const readlineTool = readline.createInterface({
   input: process.stdin,
