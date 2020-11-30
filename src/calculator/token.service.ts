@@ -56,7 +56,11 @@ export default class TokenService {
     }
 
     if (this.isOperator(currentString) && !this.isOperator(nextValue)) {
-      this.tokens.push({ type: this.operatorsDictionary.TYPE_OPERATOR, value: currentString, saliency: 1 });
+      this.tokens.push({
+        type: this.operatorsDictionary.TYPE_OPERATOR,
+        value: currentString,
+        saliency: this.operatorsDictionary.SALIENCES[currentString],
+      });
       return true;
     }
 

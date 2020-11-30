@@ -10,4 +10,12 @@ export default class OperatorsDictionary {
   TYPE_OPERATOR = 'OPERATOR';
 
   END_OF_EXPRESSION = 'END_OF_EXPRESSION';
+
+
+  SALIENCES = {
+    'plus': 1,
+    'minus': 1,
+    'times': 2,
+    'divided': 2
+  };
 }
