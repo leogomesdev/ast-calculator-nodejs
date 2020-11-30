@@ -2,26 +2,27 @@
 A calculator (console application) built with Node.js
 
 ## Description
-This applications allows the user to input verbal math expressions and get the results.
+This application allows the user to input verbal math expressions and gets the results using Syntax Tree.
 
-Available operators:
+**Available operators:**
 - plus
 - minus
-- into
 - times
 - divided
 
-Samples:
+**Samples:**
 
-|       Input       | Result |
-|:-----------------:|:------:|
-| 1 plus 3 minus 4  | 0      |
-| 1 plus (3 into 4) | 13     |
-| 1 plus 1          | 2      |
-| 1000 minus 1      | 999    |
-| 3 into 4          | 12     |
-| 4 times 4         | 16     |
-| 20 divided 5      | 4      |
+|                     Input                   | Result |
+|:-------------------------------------------:|:------:|
+|               1 plus 3 minus 4              |   0    |
+|               1 plus (3 times 4)            |   13   |
+|               1 plus 1                      |   2    |
+|               1000 minus 1                  |   999  |
+|          2 plus 1 minus 5 divided 2 minus 1 |  -0.5  |
+|               4 times 4                     |   16   |
+|               20 divided 5                  |   4    |
+
+**Please, check the [Implementation](#implementation) section for more details.**
 
 ## Main technologies used
 
@@ -88,3 +89,24 @@ If using [nvm](github.com/nvm-sh/nvm), you can easily run:
 ```bash
    npm run test
 ```
+
+## Implementation
+
+This application uses stdin and stdout as an entry point for the system (just because this way is more simple than implementing a REST API).
+
+**How does it work?**
+
+Let's considerate this expression:
+```bash
+2 plus 5 times 3
+```
+
+1) Given the expression;
+2) Uses Regular Expression just to early avoid typos;
+3) Convert the original expression into a list of tokens:
+![Sample of lis of tokens](docs/Parse_Tree_sample.jpg)
+4) Parse the tokens, respecting the order of the operators (saliency), to calculate the final result.
+- It's required to follow the math concept of BODMAS. [Here is an article about BODMAS](https://www.mathsisfun.com/operation-order-bodmas.html). In resume:
+  - Do things in Parentheses First
+  - Multiply or Divide before you Add or Subtract
+  - Otherwise just go left to right
