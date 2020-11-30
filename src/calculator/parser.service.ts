@@ -73,24 +73,4 @@ export default class ParserService {
     }
     throw new Error('Expect to find an operand');
   }
-
-  // private parseAddAndMinus(): number {
-  //   let result: number = this.parseTimesAndDivision();
-  //   while (this.current().value == this.OPERATION_PLUS || this.current().value == this.OPERATION_MINUS) {
-  //     const operator = this.current();
-  //     this.moveToNext();
-  //     result = this.resolvers[operator.value].eval(result, this.parseTimesAndDivision());
-  //   }
-  //   return result;
-  // }
-  
-  // private parseTimesAndDivision(): number {
-  //   let result = this.parseExpression();
-  //   while (this.current().value == this.OPERATION_TIMES || this.current().value == this.OPERATION_DIVIDED) {
-  //     const operator = this.current();
-  //     this.moveToNext();
-  //     result = this.resolvers[operator.value].eval(result, this.parseExpression());
-  //   }
-  //   return result;
-  // }
 }
