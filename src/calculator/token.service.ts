@@ -19,7 +19,7 @@ export default class TokenService {
    */
   tokenize(fullExpression: string): TokenDefinition[] {
     fullExpression = fullExpression.trim();
-    let currentString: string = '';
+    let currentString = '';
 
     for (let index = 0; index < fullExpression.length; index++) {
       currentString += fullExpression[index];

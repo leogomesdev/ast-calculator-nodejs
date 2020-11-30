@@ -57,7 +57,7 @@ export default class ParserService {
    */
   private parseExpression(): number {
     if (this.current().type === this.operatorsDictionary.TYPE_NUM) {
-      const value: number = Number(this.current().value);
+      const value = Number(this.current().value);
       this.moveToNext();
       return value;
     }
